@@ -126,7 +126,7 @@ export default function LehChalo() {
 
   const bgPhoto = getScenePhoto(destination);
 
-  useEffect(() => { const t = setTimeout(() => setScreen("onboarding"), 2400); return () => clearTimeout(t); }, []);
+  useEffect(() => { const t = setTimeout(() => setScreen("onboarding"), 2400); return () => clearTimeout(t); }, [onDone]);
 
   const filteredLocs = LOCATIONS.filter(l =>
     l.name.toLowerCase().includes(locQ.toLowerCase()) || l.zone.toLowerCase().includes(locQ.toLowerCase())
